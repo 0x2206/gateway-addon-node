@@ -5,9 +5,10 @@
   "scripts": {
     "prepare": "if [ ! -d schema/messages ]; then git submodule init; git submodule update; fi",
     "lint": "eslint .",
-    "build": "tsc -p ."
+    "build": "tsc -p .",
+    "install": "npm run build"
   },
-  "main": "index.js",
+  "main": "lib/index.js",
   "keywords": [
     "webthings"
   ],
@@ -36,22 +37,23 @@
   },
   "files": [
     "LICENSE",
-    "index.js",
-    "lib/action.js",
-    "lib/adapter.js",
-    "lib/addon-manager-proxy.js",
-    "lib/api-handler.js",
-    "lib/constants.js",
-    "lib/database.js",
-    "lib/deferred.js",
-    "lib/device.js",
-    "lib/event.js",
-    "lib/ipc.js",
-    "lib/notifier.js",
-    "lib/outlet.js",
-    "lib/plugin-client.js",
-    "lib/property.js",
-    "lib/utils.js",
+    "tsconfig.json",
+    "src/index.ts",
+    "src/action.ts",
+    "src/adapter.ts",
+    "src/addon-manager-proxy.ts",
+    "src/api-handler.ts",
+    "src/constants.ts",
+    "src/database.ts",
+    "src/deferred.ts",
+    "src/device.ts",
+    "src/event.ts",
+    "src/ipc.ts",
+    "src/notifier.ts",
+    "src/outlet.ts",
+    "src/plugin-client.ts",
+    "src/property.ts",
+    "src/utils.ts",
     "schema"
   ]
 }
